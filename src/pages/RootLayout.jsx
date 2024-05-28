@@ -1,19 +1,22 @@
-export default function RootLayout(){
-    return(
-        <>
-        <header>
-            <link to="/" className="logo">React Stock</link>
-            <nav>
-            <link to="/">Início</link>
-            <link to="/items">Items</link>
-            </nav>
-        </header>
-        <div>
-            <Outlet/>
-        </div>
-        <footer>
-            Feito com React e React Router! =D
-        </footer>
-        </>
-    )
+import { Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+export default function RootLayout() {
+  return (
+    <>
+      <header>
+        <Link to="/" className="logo">React Stock</Link>
+        <nav>
+          <Link to="/">Início</Link>
+          <Link to="/items">Items</Link>
+        </nav>
+      </header>
+      <div>
+        <Outlet />
+      </div>
+      <footer>
+        Feito com React e React Router! =D
+      </footer>
+    </>
+  );
 }
